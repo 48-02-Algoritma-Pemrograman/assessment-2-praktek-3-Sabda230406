@@ -6,18 +6,18 @@ public class Nomor1 {
         ArrayList<String> outPut = new ArrayList<>();
         for (int i = 0; i <= n; i++) {
             if (i == 0) {
-                outPut.add(String.valueOf(i));
+                output.add(String.valueOf(i));
             } else if (i % 3 == 0 && i % 5 == 0) {
-                outPut.add("FizzBuzz");
+                output.add("FizzBuzz");
             } else if (i % 3 == 0) {
-                outPut.add("Fizz");
+                output.add("Fizz");
             } else if (i % 5 == 0) {
                 outPut.add("Buzz");
             } else {
-                outPut.add(String.valueOf(i));
+                output.add(String.valueOf(i));
             }
         }
-        return outPut;
+        return output;
     }
 
     public static void main(String[] args) {
@@ -27,9 +27,9 @@ public class Nomor1 {
         ArrayList <String> outPut = nPrint(N);
         for (int i=0;i<=N;i++){
             if (i==N) {
-                System.out.println(outPut.get(i));
+                System.out.println(output.get(i));
             } else {
-            System.out.print(outPut.get(i)+" ");
+            System.out.print(output.get(i)+" ");
             }
         }
         /* Pekerjaan anda berakhir sini */
