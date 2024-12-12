@@ -1,36 +1,34 @@
 import java.util.Scanner;
 
 public class Nomor1 {
+    public static double hitungLuasSegitiga(int alas, int tinggi) {
+        return (double) alas * tinggi / 2;
+    }
 
-    public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        int N = input.nextInt();
-        /* Pekerjaan anda mulai dari sini */
-         Scanner sc= new Scanner(System.in);
-        int n = sc.nextInt();
-        for (int i =0;i<=n;i++){
-            System.out.println(fizz(i));
+   
+    public static void tampilkanFizzBuzz(int n) {
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.print("FizzBuzz ");
+            } else if (i % 3 == 0) {
+                System.out.print("Fizz ");
+            } else if (i % 5 == 0) {
+                System.out.print("Buzz ");
+            } else {
+                System.out.print(i + " ");
+            }
         }
-        sc.close();
     }
-    public static String fizz(int n) {
-        if (n % 3 == 0 && n % 5 == 0) {
-            return "FizzBuzz";
-        } else if (n % 3 == 0) {
-            return "Fizz";
-        } else if (n % 5 == 0) {
-            return "Buzz";
-        } 
-        return String.valueOf(n);
-        
-    
-    
 
-        /* Pekerjaan anda berakhir sini */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukan nilai N : ");
+        int N = input.nextInt();
 
-        System.out.println(Nomor1.class.getDeclaredMethods().length); 
+        // Tampilkan output FizzBuzz
+        tampilkanFizzBuzz(N);
+
+        // Tampilkan jumlah method dalam kelas
+        System.out.println(Nomor1.class.getDeclaredMethods().length);
     }
-    }
-    
-
-
+}
