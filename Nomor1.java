@@ -1,5 +1,3 @@
-package HR;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
