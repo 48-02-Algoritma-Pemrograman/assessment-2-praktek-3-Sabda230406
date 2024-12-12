@@ -1,34 +1,42 @@
+package HR;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Nomor1 {
-    public static double hitungLuasSegitiga(int alas, int tinggi) {
-        return (double) alas * tinggi / 2;
-    }
-
-   
-    public static void tampilkanFizzBuzz(int n) {
-        for (int i = 1; i <= n; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.print("FizzBuzz ");
+    static ArrayList<String> nPrint(int n) {
+        ArrayList<String> outPut = new ArrayList<>();
+        for (int i = 0; i <= n; i++) {
+            if (i == 0) {
+                outPut.add(String.valueOf(i));
+            } else if (i % 3 == 0 && i % 5 == 0) {
+                outPut.add("FizzBuzz");
             } else if (i % 3 == 0) {
-                System.out.print("Fizz ");
+                outPut.add("Fizz");
             } else if (i % 5 == 0) {
-                System.out.print("Buzz ");
+                outPut.add("Buzz");
             } else {
-                System.out.print(i + " ");
+                outPut.add(String.valueOf(i));
             }
         }
+        return outPut;
     }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Masukan nilai N : ");
         int N = input.nextInt();
+        /* Pekerjaan anda mulai dari sini */
+        ArrayList <String> outPut = nPrint(N);
+        for (int i=0;i<=N;i++){
+            if (i==N) {
+                System.out.println(outPut.get(i));
+            } else {
+            System.out.print(outPut.get(i)+" ");
+            }
+        }
+        /* Pekerjaan anda berakhir sini */
 
-        // Tampilkan output FizzBuzz
-        tampilkanFizzBuzz(N);
-
-        // Tampilkan jumlah method dalam kelas
         System.out.println(Nomor1.class.getDeclaredMethods().length);
     }
+
 }
