@@ -1,7 +1,19 @@
 import java.util.Scanner;
 
-public class feast {
-    static String fizz(int n) {
+public class Nomor1 {
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
+        /* Pekerjaan anda mulai dari sini */
+         Scanner sc= new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i =0;i<=n;i++){
+            System.out.println(fizz(i));
+        }
+        sc.close();
+    }
+    public static String fizz(int n) {
         if (n % 3 == 0 && n % 5 == 0) {
             return "FizzBuzz";
         } else if (n % 3 == 0) {
@@ -11,14 +23,14 @@ public class feast {
         } 
         return String.valueOf(n);
         
-    }
+    
+    
 
-    public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        int n = sc.nextInt();
-        for (int i =0;i<=n;i++){
-            System.out.println(fizz(i));
-        }
-        sc.close();
+        /* Pekerjaan anda berakhir sini */
+
+        System.out.println(Nomor1.class.getDeclaredMethods().length); 
     }
-}
+    }
+    
+
+
